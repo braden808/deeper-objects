@@ -38,21 +38,52 @@ var preview = {
 * 			string
 * Return 	isEnabled (string)
 */
-
+function type(print) {
+	//console.log(print);
+	var empty = 
+	//console.log(print.enabled)
+	console.log(typeof print);
+	for (var key in print){
+		if (key == "enabled"){
+			empty = "isEnabled"
+			console.log(typeof empty);
+		}
+		console.log(empty);
+	}
+}
+console.log(type(preview));
 /*
 * Function that changes the value from the key "enabled" to true, and returns 
 * the value from the key "enabled"
 *
 * Return 	value from key enabled (boolean)
 */
+function returnEnabled(data){
+	//console.log(data.enabled);
+	//data.enabled = true;
+	for (var key in data){
+		console.log(data[key]);
+		if (key == "enabled") {
+			data[key] = true;
+		}
+	}
+	return data.enabled;
+}
 
+console.log(returnEnabled(preview));
 /*
 * Function that retrieves the urls only from the key "resolutions" 
 * , stores the values in an array called "urls", and returns the created array
 * 
 * Return 	urls (array)
 */
-
+function getRes(data) {
+	var urls = [];
+	//console.log(data);
+	console.log(data.images[0].resolutions[0]);
+	for (var url = 0; i < data.images[0].resolutions      ; url ++)
+		console.log(url);
+}
 /*
 * Function that retrieves the first nested key and value pairing
 * from the values of "images", stores them in a new object called 
